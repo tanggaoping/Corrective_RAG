@@ -1,0 +1,42 @@
+NOTICE
+======
+
+本项目是基于以下开源项目的衍生作品（Derivative Work）。
+
+原项目信息
+----------
+- 原项目：awesome-llm-apps
+- 原作者：Shubham Saboo（https://github.com/Shubhamsaboo）
+- 原仓库地址：https://github.com/Shubhamsaboo/awesome-llm-apps
+- 原始文件路径：rag_tutorials/corrective_rag/corrective_rag.py
+- 许可证：Apache License 2.0
+
+原始版权声明
+------------
+Copyright (c) Shubham Saboo
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+本衍生作品所做的修改
+--------------------
+1. LLM 由 Anthropic Claude 4.5 Sonnet 更换为 DeepSeek（OpenAI 兼容接口）。
+2. 向量化模型由 OpenAI text-embedding-3-small 更换为智谱 GLM embedding-3（OpenAI 兼容接口）。
+3. 依赖升级至 LangChain / LangGraph 1.x，并迁移对应导入路径。
+4. 向量库初始化改为 QdrantVectorStore.from_documents(force_recreate=True)，自动探测向量维度。
+5. 新增 .env 环境变量支持（python-dotenv），并支持在侧边栏配置 Base URL 与模型名。
+6. 修复最终生成结果的取值 bug（原版在 app.stream() 循环外直接引用 value）。
+7. 清理未使用的导入与代码，移除 tiktoken 依赖。
+
+完整改动说明见 README.md 的「相对原版的改动」章节。
+
+本衍生作品沿用 Apache License 2.0 分发，详见 LICENSE 文件。
