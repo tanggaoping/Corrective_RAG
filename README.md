@@ -61,8 +61,8 @@
 ### 1. 克隆仓库
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-name>
+git clone https://github.com/tanggaoping/Corrective_RAG.git
+cd Corrective_RAG
 ```
 
 ### 2. 安装依赖
